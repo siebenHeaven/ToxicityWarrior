@@ -25,7 +25,7 @@ def hello():
  
 if __name__ == "__main__":
 	tokenizer=pickle.load(open('../tokenizer.pkl','rb'))
-	model = load_model('my_model.h5')
+	model = load_model('../my_model.h5')
 	comment = "You are a peice of s**t"
 	newcomment = tokenizer.texts_to_sequences([comment])
 	newcomment = sequence.pad_sequences(newcomment,maxlen=100)
